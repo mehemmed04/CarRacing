@@ -28,6 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.scoreLBL = new System.Windows.Forms.Label();
+            this.distanceLBL = new System.Windows.Forms.Label();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.car = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -35,10 +39,12 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.scoreLBL = new System.Windows.Forms.Label();
-            this.distanceLBL = new System.Windows.Forms.Label();
+            this.barrier1 = new System.Windows.Forms.PictureBox();
+            this.barrier2 = new System.Windows.Forms.PictureBox();
+            this.barrier3 = new System.Windows.Forms.PictureBox();
+            this.barrier4 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.car)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -46,18 +52,61 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barrier1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barrier2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barrier3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barrier4)).BeginInit();
             this.SuspendLayout();
+            // 
+            // scoreLBL
+            // 
+            this.scoreLBL.AutoSize = true;
+            this.scoreLBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.scoreLBL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.scoreLBL.Location = new System.Drawing.Point(12, 21);
+            this.scoreLBL.Name = "scoreLBL";
+            this.scoreLBL.Size = new System.Drawing.Size(96, 20);
+            this.scoreLBL.TabIndex = 9;
+            this.scoreLBL.Text = "SCORE : 0";
+            this.scoreLBL.Click += new System.EventHandler(this.scoreLBL_Click);
+            // 
+            // distanceLBL
+            // 
+            this.distanceLBL.AutoSize = true;
+            this.distanceLBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.distanceLBL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.distanceLBL.Location = new System.Drawing.Point(12, 54);
+            this.distanceLBL.Name = "distanceLBL";
+            this.distanceLBL.Size = new System.Drawing.Size(59, 20);
+            this.distanceLBL.TabIndex = 10;
+            this.distanceLBL.Text = "KM : 0";
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.BackColor = System.Drawing.Color.White;
+            this.pictureBox9.Location = new System.Drawing.Point(300, 560);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(20, 93);
+            this.pictureBox9.TabIndex = 8;
+            this.pictureBox9.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.BackColor = System.Drawing.Color.White;
+            this.pictureBox8.Location = new System.Drawing.Point(140, 560);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(20, 93);
+            this.pictureBox8.TabIndex = 7;
+            this.pictureBox8.TabStop = false;
             // 
             // car
             // 
             this.car.BackColor = System.Drawing.Color.Transparent;
             this.car.BackgroundImage = global::CarGame.Properties.Resources.carImage2;
             this.car.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.car.Location = new System.Drawing.Point(177, 546);
+            this.car.Location = new System.Drawing.Point(172, 666);
             this.car.Name = "car";
-            this.car.Size = new System.Drawing.Size(117, 116);
+            this.car.Size = new System.Drawing.Size(117, 66);
             this.car.TabIndex = 6;
             this.car.TabStop = false;
             // 
@@ -116,46 +165,45 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // pictureBox8
+            // barrier1
             // 
-            this.pictureBox8.BackColor = System.Drawing.Color.White;
-            this.pictureBox8.Location = new System.Drawing.Point(140, 560);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(20, 93);
-            this.pictureBox8.TabIndex = 7;
-            this.pictureBox8.TabStop = false;
+            this.barrier1.BackgroundImage = global::CarGame.Properties.Resources.barrierImage;
+            this.barrier1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.barrier1.Location = new System.Drawing.Point(37, 673);
+            this.barrier1.Name = "barrier1";
+            this.barrier1.Size = new System.Drawing.Size(71, 59);
+            this.barrier1.TabIndex = 11;
+            this.barrier1.TabStop = false;
             // 
-            // pictureBox9
+            // barrier2
             // 
-            this.pictureBox9.BackColor = System.Drawing.Color.White;
-            this.pictureBox9.Location = new System.Drawing.Point(300, 560);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(20, 93);
-            this.pictureBox9.TabIndex = 8;
-            this.pictureBox9.TabStop = false;
+            this.barrier2.BackgroundImage = global::CarGame.Properties.Resources.barrierImage;
+            this.barrier2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.barrier2.Location = new System.Drawing.Point(361, 95);
+            this.barrier2.Name = "barrier2";
+            this.barrier2.Size = new System.Drawing.Size(71, 59);
+            this.barrier2.TabIndex = 12;
+            this.barrier2.TabStop = false;
             // 
-            // scoreLBL
+            // barrier3
             // 
-            this.scoreLBL.AutoSize = true;
-            this.scoreLBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.scoreLBL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.scoreLBL.Location = new System.Drawing.Point(12, 21);
-            this.scoreLBL.Name = "scoreLBL";
-            this.scoreLBL.Size = new System.Drawing.Size(96, 20);
-            this.scoreLBL.TabIndex = 9;
-            this.scoreLBL.Text = "SCORE : 0";
-            this.scoreLBL.Click += new System.EventHandler(this.scoreLBL_Click);
+            this.barrier3.BackgroundImage = global::CarGame.Properties.Resources.barrierImage;
+            this.barrier3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.barrier3.Location = new System.Drawing.Point(361, 493);
+            this.barrier3.Name = "barrier3";
+            this.barrier3.Size = new System.Drawing.Size(71, 59);
+            this.barrier3.TabIndex = 13;
+            this.barrier3.TabStop = false;
             // 
-            // distanceLBL
+            // barrier4
             // 
-            this.distanceLBL.AutoSize = true;
-            this.distanceLBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.distanceLBL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.distanceLBL.Location = new System.Drawing.Point(12, 54);
-            this.distanceLBL.Name = "distanceLBL";
-            this.distanceLBL.Size = new System.Drawing.Size(59, 20);
-            this.distanceLBL.TabIndex = 10;
-            this.distanceLBL.Text = "KM : 0";
+            this.barrier4.BackgroundImage = global::CarGame.Properties.Resources.barrierImage;
+            this.barrier4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.barrier4.Location = new System.Drawing.Point(37, 308);
+            this.barrier4.Name = "barrier4";
+            this.barrier4.Size = new System.Drawing.Size(71, 59);
+            this.barrier4.TabIndex = 14;
+            this.barrier4.TabStop = false;
             // 
             // Form1
             // 
@@ -163,6 +211,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(444, 744);
+            this.Controls.Add(this.barrier4);
+            this.Controls.Add(this.barrier3);
+            this.Controls.Add(this.barrier2);
+            this.Controls.Add(this.barrier1);
             this.Controls.Add(this.distanceLBL);
             this.Controls.Add(this.scoreLBL);
             this.Controls.Add(this.pictureBox9);
@@ -177,6 +229,8 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.car)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -184,8 +238,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barrier1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barrier2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barrier3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barrier4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -204,6 +260,10 @@
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.Label scoreLBL;
         private System.Windows.Forms.Label distanceLBL;
+        private System.Windows.Forms.PictureBox barrier1;
+        private System.Windows.Forms.PictureBox barrier2;
+        private System.Windows.Forms.PictureBox barrier3;
+        private System.Windows.Forms.PictureBox barrier4;
     }
 }
 

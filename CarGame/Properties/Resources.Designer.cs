@@ -63,6 +63,16 @@ namespace CarGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap barrierImage {
+            get {
+                object obj = ResourceManager.GetObject("barrierImage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap carImage {
             get {
                 object obj = ResourceManager.GetObject("carImage", resourceCulture);

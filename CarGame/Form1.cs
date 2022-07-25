@@ -40,31 +40,66 @@ namespace CarGame
             pictureBox6.Top+=carspeed;
             pictureBox9.Top+=carspeed;
             pictureBox8.Top+=carspeed;
+            barrier1.Top += carspeed;
+            barrier2.Top += carspeed;
+            barrier3.Top += carspeed;
+            barrier4.Top += carspeed;
             if (pictureBox9.Top <= this.Height+carspeed && pictureBox9.Top >= this.Height - carspeed)
             {
                 pictureBox9.Top = 0;
                 pictureBox8.Top = 0;
-                score += 20;
             }
             if (pictureBox6.Top <= this.Height + carspeed && pictureBox6.Top >= this.Height - carspeed)
             {
                 pictureBox5.Top = 0;
                 pictureBox6.Top = 0;
-                score += 20;
-
             }
             if (pictureBox4.Top <= this.Height + carspeed && pictureBox4.Top >= this.Height - carspeed)
             {
                 pictureBox4.Top = 0;
                 pictureBox3.Top = 0;
-                score += 20;
-
             }
             if (pictureBox2.Top <= this.Height + carspeed && pictureBox2.Top >= this.Height - carspeed)
             {
                 pictureBox2.Top = 0;
                 pictureBox1.Top = 0;
-                score += 20;
+            }
+            Random random = new Random();
+            if(barrier1.Top<=this.Height+carspeed && barrier1.Top >= this.Height - carspeed)
+            {
+                barrier1.Top = 0;
+                score += 5;
+                int choose = random.Next(1, 3);
+                if (choose == 1) barrier1.Left = 37;
+                else if (choose == 2) barrier1.Left = 195;
+                else if (choose == 3) barrier1.Left = 361;
+            }
+            if (barrier2.Top <= this.Height + carspeed && barrier2.Top >= this.Height - carspeed)
+            {
+                barrier2.Top = 0;
+                score += 5;
+                int choose = random.Next(1, 4);
+                if (choose == 1)      barrier2.Left = 37;
+                else if (choose == 2) barrier2.Left = 195;
+                else if (choose == 3) barrier2.Left = 361;
+            }
+            if (barrier3.Top <= this.Height + carspeed && barrier3.Top >= this.Height - carspeed)
+            {
+                barrier3.Top = 0;
+                score += 5;
+                int choose = random.Next(1, 3);
+                if (choose == 1)      barrier3.Left = 37;
+                else if (choose == 2) barrier3.Left = 195;
+                else if (choose == 3) barrier3.Left = 361;
+            }                                
+            if (barrier4.Top <= this.Height + carspeed && barrier4.Top >= this.Height - carspeed)
+            {
+                barrier4.Top = 0;
+                score += 5;
+                int choose = random.Next(1, 3);
+                if (choose == 1)      barrier4.Left = 37;
+                else if (choose == 2) barrier4.Left = 195;
+                else if (choose == 3) barrier4.Left = 361;
             }
             carspeed = score / 50;
             scoreLBL.Text = "SCORE : " + score;
