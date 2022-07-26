@@ -44,6 +44,13 @@ namespace CarGame
             barrier2.Top += carspeed;
             barrier3.Top += carspeed;
             barrier4.Top += carspeed;
+            if(car.Bounds.IntersectsWith(barrier1.Bounds) ||
+                car.Bounds.IntersectsWith(barrier2.Bounds) ||
+                car.Bounds.IntersectsWith(barrier3.Bounds)||
+                car.Bounds.IntersectsWith(barrier4.Bounds) )
+            {
+                EndGame();
+            }
             if (pictureBox9.Top <= this.Height+carspeed && pictureBox9.Top >= this.Height - carspeed)
             {
                 pictureBox9.Top = 0;
@@ -136,7 +143,19 @@ namespace CarGame
                 }
             }
         }
-
+        private void EndGame()
+        {
+            timer.Stop();
+            timer2.Stop();
+            Label Result = new Label();
+            Result.Text = "Game Over!";
+            Result.Font = new Font("Comic Sans MS", 16, FontStyle.Bold);
+            Result.BringToFront();
+            Result.AutoSize = true;
+            Result.Left = 165;
+            Result.Top = 350;
+            this.Controls.Add(Result);
+        }
         private void scoreLBL_Click(object sender, EventArgs e)
         {
 
