@@ -155,6 +155,7 @@ namespace CarGame
             Result.Left = 165;
             Result.Top = 350;
             this.Controls.Add(Result);
+
         }
         private void scoreLBL_Click(object sender, EventArgs e)
         {
